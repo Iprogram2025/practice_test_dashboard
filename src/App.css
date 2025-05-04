@@ -39,7 +39,7 @@ body {
 /* Styling for the auth buttons */
 .auth-buttons {
   display: flex;
-  justify-content: flex-start; /* Align buttons to the left */
+  justify-content: flex-start; /* Align buttons to the left initially */
   gap: 15px;  /* Increased gap between buttons */
   margin-left: 50px;  /* Adjusted space from the logo */
 }
@@ -79,6 +79,7 @@ body {
 .auth-button.register:active {
   background-color: #1e7e34;  /* Darkest green on click */
 }
+
 
 /* Content Section */
 .content {
