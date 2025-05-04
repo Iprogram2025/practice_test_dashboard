@@ -1,0 +1,186 @@
+/* Body and overall layout */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+}
+
+/* Header with logo and auth buttons */
+.header {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;  /* Distribute space between logo and buttons */
+  align-items: center;
+  padding: 0 20px;  /* Horizontal padding */
+  z-index: 10;
+}
+
+.logo {
+  font-size: 20px; /* Adjusted logo size for better visibility */
+  font-weight: bold;
+  color: #007bff;
+  display: flex;
+  align-items: center; /* Ensure logo is vertically centered */
+  justify-content: flex-start;
+  flex-shrink: 0;  /* Prevent the logo from shrinking */
+}
+
+/* Styling for the auth buttons */
+.auth-buttons {
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the left */
+  gap: 15px;  /* Increased gap between buttons */
+  margin-left: 50px;  /* Adjusted space from the logo */
+}
+
+.auth-button {
+  padding: 10px 20px;  /* Larger padding for better button size */
+  font-size: 16px;  /* Bigger font size for better readability */
+  border: none;
+  border-radius: 6px;  /* Rounded corners */
+  background-color: #007bff;  /* Blue background */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;  /* Smooth transition for all changes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+.auth-button:hover {
+  background-color: #0056b3;  /* Darker blue on hover */
+  transform: translateY(-2px);  /* Slightly lift the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);  /* More prominent shadow */
+}
+
+.auth-button:active {
+  background-color: #004085;  /* Even darker blue on click */
+  transform: translateY(0);  /* Reset the lift effect when clicked */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  /* Subtle shadow when active */
+}
+
+.auth-button.register {
+  background-color: #28a745;  /* Green background for "Register" */
+}
+
+.auth-button.register:hover {
+  background-color: #218838;  /* Darker green on hover */
+}
+
+.auth-button.register:active {
+  background-color: #1e7e34;  /* Darkest green on click */
+}
+
+/* Content Section */
+.content {
+  margin-top: 160px; /* Added margin to move content down below the header */
+  text-align: center; /* Center the text for better appearance */
+}
+
+/* Calendar container styles */
+.calendar-container {
+  background: white;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 40px; /* Ensure some space between the calendar and the text */
+}
+
+/* Month navigation and calendar styling */
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.month-label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px 10px;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.arrow:hover {
+  color: #007bff;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-header {
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 0;
+  background-color: #e4e9f2;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.calendar-cell {
+  height: 80px;
+  background-color: #f0f4f8;
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+  position: relative;
+  font-size: 14px;
+}
+
+.calendar-cell.today {
+  border: 2px solid #007bff;
+  background-color: #e6f2ff;
+}
+
+.calendar-cell.blank {
+  background: transparent;
+}
+
+.assessment-link {
+  margin-top: 6px;
+  display: inline-block;
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  background-color: #28a745;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.assessment-link:hover {
+  background-color: #218838;
+}
+
+.disabled-link {
+  margin-top: 6px;
+  display: inline-block;
+  font-size: 12px;
+  color: gray;
+  background-color: #dcdcdc;
+  padding: 4px 6px;
+  border-radius: 4px;
+  cursor: not-allowed;
+}
